@@ -15,7 +15,7 @@ const currentVideo = ref<VideoInfo | null>()
 const play = (video: VideoInfo): void => {
   if (currentVideo.value?.path !== video.path) {
     currentVideo.value = video
-    if (video) player.value?.src(`file:///${video.path}`)
+    if (video) player.value?.src(`http://localhost:9555?v=file:///${video.path}`)
   }
 }
 

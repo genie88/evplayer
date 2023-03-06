@@ -10,6 +10,9 @@
 
 # EvPlayer
 
+## 参考文章
+https://zhuanlan.zhihu.com/p/511443154
+https://www.cnblogs.com/ruinuola/articles/16731093.html
 > Video player base on Electron
 
 ## Features
