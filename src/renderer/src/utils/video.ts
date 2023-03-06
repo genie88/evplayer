@@ -6,7 +6,7 @@ import { VideoFile, VideoInfo } from 'src/common/types'
 const getVideoInfo = (name: string, src: string): Promise<VideoInfo | null> => {
   return new Promise((resolve) => {
     const video = document.createElement('video')
-    video.setAttribute('src', `file:///${src}`)
+    video.setAttribute('src', `http://localhost:9555?v=file:///${src}`)
     video.onloadedmetadata = (): void => {
       video.currentTime = 1
     }

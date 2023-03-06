@@ -4,12 +4,16 @@ import { electronApp, optimizer, is, platform } from '@electron-toolkit/utils'
 
 import { getVideoFromPath } from './utils'
 import ipc from './ipc'
-
+import StreamServer from './server'
 import { IpcEvents } from '../common/ipcEvents'
 
 let mainWindow: BrowserWindow | null
-
+let ss: any
 function createWindow(): void {
+  // start stream server
+  ss = new StreamServer()
+  ss.start()
+
   mainWindow = new BrowserWindow({
     title: 'EvPlayer',
     width: 860,
